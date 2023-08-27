@@ -3463,6 +3463,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
+  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
+
 clean-css@^4.2.1, clean-css@^4.2.3:
   version "4.2.4"
   resolved "https://registry.npmjs.org/clean-css/-/clean-css-4.2.4.tgz"
@@ -10684,6 +10689,11 @@ watchpack@^1.7.4:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
 
+wavesurfer.js@^7.1.5:
+  version "7.1.5"
+  resolved "https://registry.yarnpkg.com/wavesurfer.js/-/wavesurfer.js-7.1.5.tgz#a38febc554fa76347075868f12d8e91b067f3100"
+  integrity sha512-2zb82LxQzeFn5/O5JhEs1uytdlkksUDALWt7TPN8ppP4jrajuigwcM2g4wx6b+SO4Frweg/r99L1hznr0lsBEg==
+
 webidl-conversions@^3.0.0:
   version "3.0.1"
   resolved "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz"
@@ -10927,12 +10937,15 @@ xmlchars@^2.2.0:
   resolved "https://registry.npmjs.org/xmlchars/-/xmlchars-2.2.0.tgz"
   integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
 
-xsg-player-sdk@0.0.11:
-  version "0.0.11"
-  resolved "https://registry.npmjs.org/xsg-player-sdk/-/xsg-player-sdk-0.0.11.tgz"
-  integrity sha512-4k+36PpURLbQCOg1UyKn7kNzeNsNwoJpZk2Ymfqu7eBZZXOjyPoOLVB3+UeyvRfMX1/kQd+Mv6R1vJJG9+3ciw==
+xsg-player-sdk@0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/xsg-player-sdk/-/xsg-player-sdk-0.0.16.tgz#82a476dd0cf4d518cf76d51d2db60600ecdd426a"
+  integrity sha512-86cSVK2MZC1rrrzMYdhe+AVwynglqCeWs/m2xCgjyxsYUXUqReJ/C0xDXEs6QgcEkTp/zV6twfuA3SymKNjgUg==
   dependencies:
+    classnames "^2.3.2"
+    lodash "^4.17.21"
     solid-js "^1.7.8"
+    wavesurfer.js "^7.1.5"
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"

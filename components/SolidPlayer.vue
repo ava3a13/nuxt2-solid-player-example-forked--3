@@ -3,13 +3,48 @@
     <div
       ref="player"
       :style="{
-        'max-width': '1000px',
-        'aspect-ratio': '16/9',
+        //'max-width': '1000px',
+        //'aspect-ratio': '16/9',
         margin: '20px auto',
         border: 'dotted 10px green',
-        overflow: 'hidden',
+        //overflow: 'hidden',
       }"
     />
+    <div
+      :style="{
+        margin: '20px',
+      }"
+    >
+      <button
+        @click="playPause"
+        :style="{
+          padding: '10px',
+          border: '1px solid black',
+          marginRight: '10px',
+        }"
+      >
+        Play/Pause
+      </button>
+      <button
+        @click="fastForward"
+        :style="{
+          padding: '10px',
+          border: '1px solid black',
+          marginRight: '10px',
+        }"
+      >
+        FastForward
+      </button>
+      <button
+        @click="rewind"
+        :style="{
+          padding: '10px',
+          border: '1px solid black',
+        }"
+      >
+        Rewind
+      </button>
+    </div>
   </div>
 </template>
 
@@ -18,15 +53,20 @@ import Vue from 'vue'
 import { createComponent, render } from 'solid-js/web'
 import { SolidPlayer } from 'xsg-player-sdk'
 import 'xsg-player-sdk/dist/style.css'
-import 'xsg-player-sdk/fonts/stylesheet.css'
+//import 'xsg-player-sdk/fonts/stylesheet.css'
 import { createSignal, mergeProps } from 'solid-js'
 
 export default Vue.extend({
   data() {
     return {
+      videoRef: null,
       playerProps: {
         autoPlay: true,
         muted: true,
+        type: 'video',
+        ref: (el) => {
+          this.videoRef = el
+        },
         languages: [
           {
             label: 'GEO',
@@ -58,8 +98,24 @@ export default Vue.extend({
             ],
           },
         ],
+        onFinished: () => console.log('finished'),
       },
     }
+  },
+  methods: {
+    playPause() {
+      if (this.videoRef?.isPlaying()) {
+        this.videoRef?.pause()
+      } else {
+        this.videoRef?.play()
+      }
+    },
+    fastForward() {
+      this.videoRef?.fastForward()
+    },
+    rewind() {
+      this.videoRef?.rewind()
+    },
   },
   mounted() {
     const [solidProps, setSolidProps] = createSignal(this.playerProps)
