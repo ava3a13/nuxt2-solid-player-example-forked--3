@@ -62,7 +62,6 @@ export default Vue.extend({
       videoRef: null,
       playerProps: {
         autoPlay: true,
-        muted: true,
         type: 'video',
         ref: (el) => {
           this.videoRef = el

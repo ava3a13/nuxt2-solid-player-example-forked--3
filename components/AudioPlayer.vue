@@ -26,7 +26,6 @@ export default Vue.extend({
       playerProps: {
         type: 'audio',
         autoPlay: true,
-        muted: true,
         poster: 'https://picsum.photos/200',
         languages: [
           {
@@ -36,15 +35,7 @@ export default Vue.extend({
                 label: '720p',
                 sources: [
                   {
-                    src: 'https://ia804706.us.archive.org/18/items/abba-abba-gold-greatest-hits_202301/ABBA%20Gold-%20Greatest%20Hits/07%20I%20Have%20A%20Dream.mp3',
-                  },
-                ],
-              },
-              {
-                label: '480p',
-                sources: [
-                  {
-                    src: 'https://ia904706.us.archive.org/18/items/abba-abba-gold-greatest-hits_202301/ABBA%20Gold-%20Greatest%20Hits/09%20Money%2C%20Money%2C%20Money.mp3',
+                    src: 'https://uploader.1tv.ge/1tvplay/demo/demo.mp3',
                   },
                 ],
               },
