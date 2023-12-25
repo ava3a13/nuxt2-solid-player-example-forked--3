@@ -9,9 +9,10 @@
 import Vue from 'vue'
 import SolidPlayer from '~/components/SolidPlayer.vue'
 import AudioPlayer from '~/components/AudioPlayer.vue'
+import HlsPlayer from '~/components/HlsPlayer.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
-  components: { SolidPlayer, AudioPlayer },
+  components: { SolidPlayer, AudioPlayer, HlsPlayer },
 })
 </script>

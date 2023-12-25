@@ -74,7 +74,7 @@ export default Vue.extend({
                 label: '1080p',
                 sources: [
                   {
-                    src: 'https://ge.uploader.1tv.ge/1tvplay/1997-%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%A1%E1%83%90%E1%83%97%E1%83%90%E1%83%A3%E1%83%A0%E1%83%98-3647d/647d8dd9f186f-1080p.mp4',
+                    src: 'https://uploader.1tv.ge/1tvplay/series/2021/1274/ge/64ff48a005b2e-1080p.mp4',
                   },
                 ],
               },
@@ -82,7 +82,7 @@ export default Vue.extend({
                 label: '720p',
                 sources: [
                   {
-                    src: 'https://ge.uploader.1tv.ge/1tvplay/1997-%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%A1%E1%83%90%E1%83%97%E1%83%90%E1%83%A3%E1%83%A0%E1%83%98-3647d/647d8f8e180db-720p.mp4',
+                    src: 'https://uploader.1tv.ge/1tvplay/series/2021/1274/ge/64ff53e88faee-720p.mp4',
                   },
                 ],
               },
@@ -90,7 +90,7 @@ export default Vue.extend({
                 label: '480p',
                 sources: [
                   {
-                    src: 'https://ge.uploader.1tv.ge/1tvplay/1997-%E1%83%A5%E1%83%90%E1%83%A0%E1%83%97%E1%83%A3%E1%83%9A%E1%83%98-%E1%83%A1%E1%83%90%E1%83%97%E1%83%90%E1%83%A3%E1%83%A0%E1%83%98-3647d/647d90ef713fa-480p.mp4',
+                    src: 'https://uploader.1tv.ge/1tvplay/series/2021/1274/ge/64ff5d9256425-480p.mp4',
                   },
                 ],
               },
