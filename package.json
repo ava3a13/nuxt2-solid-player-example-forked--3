@@ -22,7 +22,7 @@
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0",
-    "xsg-player-sdk": "0.0.20"
+    "xsg-player-sdk": "0.0.21"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
