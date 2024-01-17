@@ -1,14 +1,13 @@
 <template>
-  <div>
-    <div
-      ref="player"
-      :style="{
-        //'max-width': '1000px',
-        //height: '200px',
-        margin: '20px auto',
-        border: 'dotted 10px green',
-      }"
-    />
+  <div
+    :style="{
+      display: 'flex',
+      'flex-direction': 'column',
+      gap: '16px',
+    }"
+  >
+    <h2>Regular Audio Player</h2>
+    <div ref="player" />
   </div>
 </template>
 
@@ -17,7 +16,6 @@ import Vue from 'vue'
 import { createComponent, render } from 'solid-js/web'
 import { SolidPlayer } from 'xsg-player-sdk'
 import 'xsg-player-sdk/dist/style.css'
-//import 'xsg-player-sdk/fonts/stylesheet.css'
 import { createSignal, mergeProps } from 'solid-js'
 
 export default Vue.extend({

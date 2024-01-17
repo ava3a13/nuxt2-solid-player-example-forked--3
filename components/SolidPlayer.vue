@@ -1,50 +1,13 @@
 <template>
-  <div>
-    <div
-      ref="player"
-      :style="{
-        //'max-width': '1000px',
-        //'aspect-ratio': '16/9',
-        margin: '20px auto',
-        border: 'dotted 10px green',
-        //overflow: 'hidden',
-      }"
-    />
-    <div
-      :style="{
-        margin: '20px',
-      }"
-    >
-      <button
-        @click="playPause"
-        :style="{
-          padding: '10px',
-          border: '1px solid black',
-          marginRight: '10px',
-        }"
-      >
-        Play/Pause
-      </button>
-      <button
-        @click="fastForward"
-        :style="{
-          padding: '10px',
-          border: '1px solid black',
-          marginRight: '10px',
-        }"
-      >
-        FastForward
-      </button>
-      <button
-        @click="rewind"
-        :style="{
-          padding: '10px',
-          border: '1px solid black',
-        }"
-      >
-        Rewind
-      </button>
-    </div>
+  <div
+    :style="{
+      display: 'flex',
+      'flex-direction': 'column',
+      gap: '16px',
+    }"
+  >
+    <h2>Regular Video Player</h2>
+    <div ref="player" />
   </div>
 </template>
 
@@ -53,7 +16,6 @@ import Vue from 'vue'
 import { createComponent, render } from 'solid-js/web'
 import { SolidPlayer } from 'xsg-player-sdk'
 import 'xsg-player-sdk/dist/style.css'
-//import 'xsg-player-sdk/fonts/stylesheet.css'
 import { createSignal, mergeProps } from 'solid-js'
 
 export default Vue.extend({
@@ -61,14 +23,17 @@ export default Vue.extend({
     return {
       videoRef: null,
       playerProps: {
-        autoPlay: true,
+        autoplay: true,
         type: 'video',
+        chromeCast: true,
+        poster: 'https://picsum.photos/200',
         ref: (el) => {
           this.videoRef = el
         },
         languages: [
           {
             label: 'GEO',
+            title: 'ქართული სერიალი',
             qualities: [
               {
                 label: '1080p',
@@ -101,6 +66,20 @@ export default Vue.extend({
       },
     }
   },
+
+  mounted() {
+    const [solidProps, setSolidProps] = createSignal(this.playerProps)
+
+    this.$watch('playerProps', function (newProps) {
+      setSolidProps(newProps)
+    })
+
+    return render(
+      () => createComponent(SolidPlayer, mergeProps(solidProps)),
+      this.$refs.player
+    )
+  },
+
   methods: {
     playPause() {
       if (this.videoRef?.isPlaying()) {
@@ -115,18 +94,6 @@ export default Vue.extend({
     rewind() {
       this.videoRef?.rewind()
     },
-  },
-  mounted() {
-    const [solidProps, setSolidProps] = createSignal(this.playerProps)
-
-    this.$watch('playerProps', function (newProps) {
-      setSolidProps(newProps)
-    })
-
-    return render(
-      () => createComponent(SolidPlayer, mergeProps(solidProps)),
-      this.$refs.player
-    )
   },
 })
 </script>
